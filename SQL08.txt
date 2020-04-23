@@ -1,0 +1,67 @@
+信息系统与数据库技术练习8答题卡
+
+班级：     19信管1班
+姓名：     祝晚芳
+学号：     20190307117
+
+注：请将答案放置在序号下方。*/
+
+（一）
+1.
+USE EDUC
+
+2.
+UPDATE Books
+SET Price=35.6,Author='张建林'
+WHERE Bname='高等数学'
+
+3.
+UPDATE Books
+SET Discount=Discount-0.05
+
+4.
+SELECT *
+FROM Books
+
+5.
+SELECT TOP 10 *
+FROM Student
+
+6.
+SELECT TOP 20 PERCENT *
+FROM SC
+
+7.
+SELECT *
+FROM Student
+WHERE Sex='女'
+
+8.
+SELECT *
+FROM SC
+WHERE SCscore<60
+
+9.
+SELECT Bname,Author,Publisher,ISBN
+FROM Books
+
+10.
+SELECT DISTINCT Cid
+FROM SC 
+
+11.
+SELECT Bname,Author,Publisher,PublisherDate
+FROM Books 
+WHERE YEAR(PublisherDate)=2012
+
+12.
+SELECT Sid AS 学号,Cid AS 课程号,SCscore AS 成绩
+FROM SC
+
+13.
+SELECT Sid,Sname,Sex,DATEDIFF(YY,Birth,GETDATE()) AS Age
+FROM Student
+
+14.
+SELECT *,Price*Discount AS DiscountPrice,Price*Discount-Price AS Economize
+FROM Books
